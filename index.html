@@ -1,182 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vibhuti's Profile Card</title>
     <style>
-
         body{
             background-image: url(abstract.jpeg);
             background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
-            height: 1000px;
-            margin: 0px 0px 0px 0px;
-            padding: 0px;
-
-
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-        #pfp{
-            width: 20%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 29px;
-            margin-bottom: 30px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 10px 10px 20px #000000;
-            transition: all 1s ease-in-out;
-        }
-
-        #pfp:hover{
-            box-shadow: 20px 20px 30px #272626;
-            transform: scale(1.2);
-        }
-
-
-        #name{
-            text-align: center;
-            color: #320E3B;
-        }
-
-        #aboutme{
-            text-align: center;
-            font-size: medium;
-        }
-
-        .about1{
-
-            background-image: url(bgwhite.png);
-            object-fit: cover;
-            display: flex;
-            margin-left : 310px;
-            margin-right: 310px;
-            padding: 30px;
-            margin-top: 20px;
-            border-radius: 10%;
-            transition: all 1s ease-in-out;
-            box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.5);
-            margin-bottom: 40px;
-        }
-        .about1:hover{
-            transform: scale(1.1);
-            box-shadow: 20px 20px 30px rgba(184, 184, 184, 0.5)
-
-
-        }
-        .about{
-            
-            padding-right: 50px;
-            padding-left : 50px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        #institute{
-            text-align: center;
-            color: #320E3B;
-        }
-
-        .nav{
+        .image{
             display: flex;
             justify-content: center;
-            margin: 10px auto;
+           }
+        
+        .image img{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.75);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+
+        }
+
+        .image img:hover{
+            transform: scale(1.1);
+            box-shadow: 10px 15px 15px 0px rgba(0, 0, 0, 0.5);
+        }
+        .para{
+            width: 60%; 
+            margin: 20px auto; 
+            padding: 20px; 
+            background-image: url(bgwhite.png);
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px; 
+            box-shadow: 5px 10px 15px 0px rgba(0, 0, 0, 0.717); 
+            color: rgb(9, 13, 76);
+            transition: transform 0.3s ease-in-out;
+
             
         }
-
-        #git{
-            border-radius: 30%;
-            margin: 15px;
-            transition: all 70ms ease-in-out;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-        }
-        #git:hover{
-            box-shadow: 10px 10px 20px rgba(55, 55, 55, 0.5) ;
+        .para:hover{
             transform: scale(1.1);
+            box-shadow: 10px 15px 20px 0px rgba(0, 0, 0, 0.5); 
+        }
+        .name h1{
+            text-align: center;
         }
 
+        .icons img { 
+             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+        
+        .icons img:hover {
+            transform: scale(1.1); 
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .icons{
+            text-align: center;
+        }
+        #github{
+            border-radius: 15px;
+        }
         #linkedin{
-            border-radius: 30%;
-            margin: 15px;
-            transition: all 70ms ease-in-out;
-            box-shadow: 5px 5px 10px rgba(37, 22, 199, 0.5);
+            border-radius: 15px;
         }
-        #linkedin:hover{
-            box-shadow: 10px 10px 20px rgba(107, 94, 255, 0.5) ;
-            transform: scale(1.1);
+        #twitter{
+            border-radius: 15px;
+        }
+        
+
+
+
+
+        .icons img:hover {
+        transform: scale(1.1); 
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); }
+
+        #github{
+            margin: 15px;
         }
 
         #insta{
-            border-radius: 30%;
             margin: 15px;
-            transition: all 70ms ease-in-out;
-            box-shadow: 5px 5px 10px rgba(255, 97, 234, 0.5);
+            border-radius: 19px ;
         }
-        #insta:hover{
-            box-shadow: 10px 10px 20px rgba(255, 88, 202, 0.5) ;
-            transform: scale(1.1);
+
+        #linkedin{
+            margin: 15px;
         }
 
         #twitter{
-            border-radius: 30%;
             margin: 15px;
-            transition: all 70ms ease-in-out;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
         }
-        #twitter:hover{
-            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5) ;
-            transform: scale(1.1);
-        }
-
-        
-
 
     </style>
-</head>
-<body>
-
-    <div class="main1">
-       
-        <div>
-            <img  id="pfp" src="jvr mustard profile.JPG" alt="jaivardhan image">
-        </div>
-        
-        <div class="about1">
-            <div class="about">
-                <h2 id="name">
-                    Jaivardhan D Rao
-                </h2>
-                <h2 id="institute">
-                     Undergraduate Student, Scaler School of Technology
-                </h2>
-                <div id="aboutme1">
-                    <p id="aboutme">
-
-                        Currently pursuing a specialization in Web Development and Introduction to Computational Programming (ICP) with a focus on HTML, CSS, JavaScript, and Java. Passionate about building dynamic and responsive web applications, and committed to mastering the skills necessary for a successful career in the tech industry.
-                        
-                    </p>
-                </div> 
-            </div>
-        </div>
-
-        <div class="nav">
-            <a target="_blank" href="https://github.com/jaivardhanrao">
-                <img id="git" src="github image.png" width="65px"
-              /></a>
-              <a  target="_blank"  href="https://www.linkedin.com/in/jaivardhan-d-rao-846b37319/">
-                <img id="linkedin" src="linkedin image.png" width="65px"
-              /></a>
-              <a  target="_blank"  href="https://x.com/JaiKumar_2104">
-                <img id="twitter" src="x image.png" width="65px"
-              /></a>
-              <a  target="_blank"  href="https://www.instagram.com/">
-                <img id="insta" src="insta image.png" width="65px"
-              /></a>
-        </div>
-
+  </head>
+  <body>
+    <div class="image">
+        <img src="jvr mustard profile.JPG" alt="my image" width="200px" >
     </div>
+    <div class="para">
+    <div class="name">
+      <h1>Jaivardhan D Rao</h1>
+    </div>
+    <div id="content">
+      <p>
+        A first-year Computer Science student with a passion for coding,
+        problem-solving, and technology. I love learning new programming
+        languages, exploring algorithms, and building projects that challenge my
+        creativity. Currently, I'm focused on mastering Python, Java, and web
+        development basics. When I'm not coding, I enjoy gaming, reading about
+        tech innovations, and collaborating on team projects. I'm excited to
+        connect with fellow tech enthusiasts and contribute to innovative ideas
+        that shape the future!
+      </p>
+    </div>
+    </div>
+    <div class="icons">
+        <a href="https://github.com/jaivardhanrao" target="_blank" ><img src="github image.png" width="75" id="github" > </a>
     
-</body>
+    
+        <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><img src="insta image.png" width="75" id="insta"></a>
+    
+    
+        <a href="https://www.linkedin.com/in/jaivardhan-d-rao-846b37319/" target="_blank"><img src="linkedin image.png" width="75" id="linkedin"></a>
+  
+  
+        <a href="https://x.com/JaiKumar_2104" target="_blank"><img src="x image.png" width="75" id="twitter"></a>
+    </div>
+
+
+  </body>
 </html>
